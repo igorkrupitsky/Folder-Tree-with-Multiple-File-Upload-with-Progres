@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{571D4951-468C-4634-B061-7587CE8D2B8A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Upload</RootNamespace>
+    <AssemblyName>Upload</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Upload.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Upload.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\3.3.6\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\3.3.6\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\3.3.6\css\bootstrap.css" />
+    <Content Include="bootstrap\3.3.6\css\bootstrap.min.css" />
+    <Content Include="bootstrap\3.3.6\css\dist\css\bootstrap.css" />
+    <Content Include="bootstrap\3.3.6\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\3.3.6\js\bootstrap.js" />
+    <Content Include="bootstrap\3.3.6\js\bootstrap.min.js" />
+    <Content Include="bootstrap\3.3.6\js\npm.js" />
+    <Content Include="images\ext\all.gif" />
+    <Content Include="images\ext\bmp.gif" />
+    <Content Include="images\ext\csv.gif" />
+    <Content Include="images\ext\doc.gif" />
+    <Content Include="images\ext\dtsx.png" />
+    <Content Include="images\ext\eml.gif" />
+    <Content Include="images\ext\exe.gif" />
+    <Content Include="images\ext\gif.gif" />
+    <Content Include="images\ext\htm.gif" />
+    <Content Include="images\ext\iqy.gif" />
+    <Content Include="images\ext\mdb.gif" />
+    <Content Include="images\ext\mp3.gif" />
+    <Content Include="images\ext\mpp.gif" />
+    <Content Include="images\ext\pbix.png" />
+    <Content Include="images\ext\pdf.gif" />
+    <Content Include="images\ext\ppt.gif" />
+    <Content Include="images\ext\R.png" />
+    <Content Include="images\ext\rdl.png" />
+    <Content Include="images\ext\rpt.gif" />
+    <Content Include="images\ext\swf.gif" />
+    <Content Include="images\ext\tif.png" />
+    <Content Include="images\ext\txt.gif" />
+    <Content Include="images\ext\vsd.gif" />
+    <Content Include="images\ext\xls.gif" />
+    <Content Include="images\ext\xlt.gif" />
+    <Content Include="images\ext\xml.gif" />
+    <Content Include="images\ext\zip.gif" />
+    <Content Include="images\folder_closed.gif" />
+    <Content Include="images\folder_open.gif" />
+    <Content Include="images\minus.gif" />
+    <Content Include="images\plus.gif" />
+    <Content Include="jquery\jquery-1.12.3.min.js" />
+    <Content Include="images\progress.png" />
+    <Content Include="Upload.aspx" />
+    <Content Include="Upload.css" />
+    <Content Include="Upload.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\3.3.6\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap\3.3.6\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap\3.3.6\css\bootstrap.css.map" />
+    <Content Include="bootstrap\3.3.6\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap\3.3.6\css\less\.csscomb.json" />
+    <Content Include="bootstrap\3.3.6\css\less\.csslintrc" />
+    <Content Include="bootstrap\3.3.6\css\less\alerts.less" />
+    <Content Include="bootstrap\3.3.6\css\less\badges.less" />
+    <Content Include="bootstrap\3.3.6\css\less\bootstrap.less" />
+    <Content Include="bootstrap\3.3.6\css\less\breadcrumbs.less" />
+    <Content Include="bootstrap\3.3.6\css\less\button-groups.less" />
+    <Content Include="bootstrap\3.3.6\css\less\buttons.less" />
+    <Content Include="bootstrap\3.3.6\css\less\carousel.less" />
+    <Content Include="bootstrap\3.3.6\css\less\close.less" />
+    <Content Include="bootstrap\3.3.6\css\less\code.less" />
+    <Content Include="bootstrap\3.3.6\css\less\component-animations.less" />
+    <Content Include="bootstrap\3.3.6\css\less\dropdowns.less" />
+    <Content Include="bootstrap\3.3.6\css\less\forms.less" />
+    <Content Include="bootstrap\3.3.6\css\less\glyphicons.less" />
+    <Content Include="bootstrap\3.3.6\css\less\grid.less" />
+    <Content Include="bootstrap\3.3.6\css\less\input-groups.less" />
+    <Content Include="bootstrap\3.3.6\css\less\jumbotron.less" />
+    <Content Include="bootstrap\3.3.6\css\less\labels.less" />
+    <Content Include="bootstrap\3.3.6\css\less\list-group.less" />
+    <Content Include="bootstrap\3.3.6\css\less\media.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\alerts.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\background-variant.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\border-radius.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\buttons.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\center-block.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\clearfix.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\forms.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\gradients.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\grid-framework.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\grid.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\hide-text.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\image.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\labels.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\list-group.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\nav-divider.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\nav-vertical-align.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\opacity.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\pagination.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\panels.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\progress-bar.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\reset-filter.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\reset-text.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\resize.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\responsive-visibility.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\size.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\tab-focus.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\table-row.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\text-emphasis.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\text-overflow.less" />
+    <Content Include="bootstrap\3.3.6\css\less\mixins\vendor-prefixes.less" />
+    <Content Include="bootstrap\3.3.6\css\less\modals.less" />
+    <Content Include="bootstrap\3.3.6\css\less\navbar.less" />
+    <Content Include="bootstrap\3.3.6\css\less\navs.less" />
+    <Content Include="bootstrap\3.3.6\css\less\normalize.less" />
+    <Content Include="bootstrap\3.3.6\css\less\pager.less" />
+    <Content Include="bootstrap\3.3.6\css\less\pagination.less" />
+    <Content Include="bootstrap\3.3.6\css\less\panels.less" />
+    <Content Include="bootstrap\3.3.6\css\less\popovers.less" />
+    <Content Include="bootstrap\3.3.6\css\less\print.less" />
+    <Content Include="bootstrap\3.3.6\css\less\progress-bars.less" />
+    <Content Include="bootstrap\3.3.6\css\less\responsive-embed.less" />
+    <Content Include="bootstrap\3.3.6\css\less\responsive-utilities.less" />
+    <Content Include="bootstrap\3.3.6\css\less\scaffolding.less" />
+    <Content Include="bootstrap\3.3.6\css\less\tables.less" />
+    <Content Include="bootstrap\3.3.6\css\less\theme.less" />
+    <Content Include="bootstrap\3.3.6\css\less\thumbnails.less" />
+    <Content Include="bootstrap\3.3.6\css\less\tooltip.less" />
+    <Content Include="bootstrap\3.3.6\css\less\type.less" />
+    <Content Include="bootstrap\3.3.6\css\less\utilities.less" />
+    <Content Include="bootstrap\3.3.6\css\less\variables.less" />
+    <Content Include="bootstrap\3.3.6\css\less\wells.less" />
+    <Content Include="bootstrap\3.3.6\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\3.3.6\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\3.3.6\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\3.3.6\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Upload.aspx.vb">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55238</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Upload</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
